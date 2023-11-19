@@ -1,0 +1,13 @@
+.screen-container {
+  width: calc(100% - 100px);
+  height: 100%;
+  background-color: darkgray;
+  border-radius: 30px;
+  opacity: 1;
+
+}
+
+.flex {
+  display: flex;
+}
+ 

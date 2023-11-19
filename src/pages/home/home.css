@@ -1,0 +1,7 @@
+.body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #2d2e37;
+    border-radius: 30px;
+    display: flex;
+}
