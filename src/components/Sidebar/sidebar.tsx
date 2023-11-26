@@ -6,7 +6,7 @@ import { FaGripfire, FaPlay } from "react-icons/fa";
 import { FaSignOutAlt } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
 import apiClient from '../../spotify';
-
+import '../Sidebar/sidebar.css'
 
 
 export const Sidebar = () => {
@@ -28,6 +28,7 @@ export const Sidebar = () => {
         <Button title='Favorite' to='/favorite' icon={<MdFavorite/>}/>
         <Button title='library' to='/library' icon={<IoLibrary/>}/>
       </div>
+      <Button to={''} title={'Sing Out'} icon={<FaSignOutAlt/>}/>
     </div>
     </>
   )
