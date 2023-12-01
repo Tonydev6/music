@@ -1,0 +1,8 @@
+services: 
+  music:
+      build: .
+      container_name: music-container
+      ports:
+        -  3000:3000
+      stdin_open: true
+      tty: true
