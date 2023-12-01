@@ -14,9 +14,19 @@ export const Home = () => {
   const [token, setToken] = useState('')
   const hash = window.location.hash
   useEffect(() => {
-    const _token = hash.split('&')[0].split('=')[1]
-    setToken(_token)
-    setClientToken(_token)
+    // retrieve token from the localstorage
+    const token = window.localStorage.getItem('token')
+
+    // if the token is not there i'll retrieve it from  the url
+    if (!token && hash){
+      const _token = hash.split('&')[0].split('=')[1]
+      window.localStorage.setItem('token',_token)
+      setClientToken(_token)
+      setToken(_token)
+    } else {
+      setClientToken(token);
+      setToken(token!);
+    }
   }, [])
   return !token ?(
     <Login/>

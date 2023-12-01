@@ -1,5 +1,7 @@
 @import url(./shared/globalStyles.css
 );
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
 body{
     background-color: black;
 }

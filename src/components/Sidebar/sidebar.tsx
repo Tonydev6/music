@@ -5,7 +5,7 @@ import { MdFavorite } from "react-icons/md";
 import { FaGripfire, FaPlay } from "react-icons/fa";
 import { FaSignOutAlt } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
-import apiClient from '../../spotify';
+import apiClient, { getUserInfo } from '../../spotify';
 import '../Sidebar/sidebar.css'
 
 
@@ -13,9 +13,7 @@ export const Sidebar = () => {
   const [image, setImage] = useState('')
 
   useEffect(() => {
-    apiClient.get("me").then((response) =>{
-      setImage(response.data.images[0].url)
-    })
+     getUserInfo().then( res => setImage(res.data.images[0].url))
   },[])
   return (
     <>
